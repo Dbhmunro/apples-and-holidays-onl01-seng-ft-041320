@@ -60,7 +60,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday_print = holiday.to_s.split("_") #split multi-word holiday symbols to allow for proper capitalization
       holiday_print.each { |h| h.capitalize! }
       # holiday_print.join(" ") not helpful to have here as .join function doesn't permanently change the array to a string
-      puts "  #{holiday_print.join(" ")}: #{supplies.join(", ")}" # will print for each holiday
+      puts "  #{holiday_print.join(" ")}: #{supplies.join(", ")}" # will puts for each holiday
     end
   end
 end
