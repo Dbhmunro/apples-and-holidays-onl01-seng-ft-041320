@@ -55,12 +55,12 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   holiday_hash.each do |season, season_hash|
-    puts "#{season.to_s.capitalize}:"
+    puts "#{season.to_s.capitalize}:" #within this each loop in order to only print once per season
     season_hash.each do |holiday, supplies|
-      holiday_print = holiday.to_s.split("_")
+      holiday_print = holiday.to_s.split("_") #split multi-word holiday symbols to allow for proper capitalization
       holiday_print.each { |h| h.capitalize! }
-      # holiday_print.join(" ")
-      puts "  #{holiday_print.join(" ")}: #{supplies.join(", ")}"
+      # holiday_print.join(" ") not helpful to have here as .join function doesn't permanently change the array to a string
+      puts "  #{holiday_print.join(" ")}: #{supplies.join(", ")}" # will print for each holiday
     end
   end
 end
