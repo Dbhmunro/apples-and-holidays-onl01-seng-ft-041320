@@ -60,7 +60,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday_print = holiday.to_s.split("_")
       holiday_print.each { |h| h.capitalize! }
       holiday_print.join(" ")
-      puts "  #{holiday}: #{supplies.join(",")}"
+      puts "  #{holiday_print}: #{supplies.join(",")}"
       # holiday_and_supplies = "  #{holiday.to_s.capitalize}"
     end
   end
